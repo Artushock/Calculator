@@ -7,6 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="number_color">#00416A</color>
-    <color name="sign_color">#F07427</color>
+
+    <color name="yale_blue_A">#0F4D92</color>
+    <color name="yale_blue_B">#5EA9FF</color>
+    <color name="yale_blue_C">#4194F2</color>
+
+    <color name="yale_yellow_A">#A66E0C</color>
+    <color name="yale_yellow_B">#F0A726</color>
+
 </resources>
