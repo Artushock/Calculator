@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -13,16 +14,18 @@ public class MainActivity extends AppCompatActivity {
     private static final String CALCULATOR_KEY = "CALCULATOR_KEY";
     private static final String CALCULATOR_SCREEN_KEY = "CALCULATOR_SCREEN_KEY";
 
-    private Button zeroButton;
-    private Button oneButton;
-    private Button twoButton;
-    private Button threeButton;
-    private Button fourButton;
-    private Button fiveButton;
-    private Button sixButton;
-    private Button sevenButton;
-    private Button eightButton;
-    private Button nineButton;
+    private final int[] numberButtonsIDs = {
+            R.id.zero_button,
+            R.id.one_button,
+            R.id.two_button,
+            R.id.three_button,
+            R.id.four_button,
+            R.id.five_button,
+            R.id.six_button,
+            R.id.seven_button,
+            R.id.eight_button,
+            R.id.nine_button,
+    };
 
     private Button plusButton;
     private Button minusButton;
@@ -73,16 +76,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void buttonsInit() {
-        zeroButton = findViewById(R.id.zero_button);
-        oneButton = findViewById(R.id.one_button);
-        twoButton = findViewById(R.id.two_button);
-        threeButton = findViewById(R.id.three_button);
-        fourButton = findViewById(R.id.four_button);
-        fiveButton = findViewById(R.id.five_button);
-        sixButton = findViewById(R.id.six_button);
-        sevenButton = findViewById(R.id.seven_button);
-        eightButton = findViewById(R.id.eight_button);
-        nineButton = findViewById(R.id.nine_button);
+
+
+        setNumberButtonsListeners();
 
         plusButton = findViewById(R.id.plus_button);
         minusButton = findViewById(R.id.minus_button);
@@ -96,47 +92,20 @@ public class MainActivity extends AppCompatActivity {
         commaButton = findViewById(R.id.comma_button);
     }
 
+    private void setNumberButtonsListeners() {
+        for (int i = 0; i < numberButtonsIDs.length; i++) {
+            findViewById(numberButtonsIDs[i]).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Button button = (Button)v;
+                    calculator.putNumber(button.getText().toString());
+                    updateScreen();
+                }
+            });
+        }
+    }
+
     private void setOnButtonsClickListeners() {
-        zeroButton.setOnClickListener(v -> {
-            calculator.putNumber(Numbers.ZERO);
-            updateScreen();
-        });
-        oneButton.setOnClickListener(v -> {
-            calculator.putNumber(Numbers.ONE);
-            updateScreen();
-        });
-        twoButton.setOnClickListener(v -> {
-            calculator.putNumber(Numbers.TWO);
-            updateScreen();
-        });
-        threeButton.setOnClickListener(v -> {
-            calculator.putNumber(Numbers.THREE);
-            updateScreen();
-        });
-        fourButton.setOnClickListener(v -> {
-            calculator.putNumber(Numbers.FOUR);
-            updateScreen();
-        });
-        fiveButton.setOnClickListener(v -> {
-            calculator.putNumber(Numbers.FIVE);
-            updateScreen();
-        });
-        sixButton.setOnClickListener(v -> {
-            calculator.putNumber(Numbers.SIX);
-            updateScreen();
-        });
-        sevenButton.setOnClickListener(v -> {
-            calculator.putNumber(Numbers.SEVEN);
-            updateScreen();
-        });
-        eightButton.setOnClickListener(v -> {
-            calculator.putNumber(Numbers.EIGHT);
-            updateScreen();
-        });
-        nineButton.setOnClickListener(v -> {
-            calculator.putNumber(Numbers.NINE);
-            updateScreen();
-        });
 
         plusButton.setOnClickListener(v -> {
             calculator.putSign(Signs.PLUS);

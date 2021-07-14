@@ -66,13 +66,12 @@ public class Calculator implements Parcelable {
     };
 
 
-    public void putNumber(Numbers number) {
+    public void putNumber(String s) {
         if (isResultOnScreen) {
             clearAll();
             isResultOnScreen = false;
         }
 
-        String s = number.getNumberString();
         if (isSignWaited()) {
             firstStringArgument += s;
         } else {
@@ -101,7 +100,7 @@ public class Calculator implements Parcelable {
 
     public void putComma(Signs sign) {
         if (wasNotCalculatorUsed()) {
-            firstStringArgument = Numbers.ZERO.getNumberString() + Signs.COMMA.getSignString();
+            firstStringArgument = "0.";
             calculatorScreen.addToScreen(firstStringArgument);
         }
         String commaStr = sign.getSignString();
