@@ -17,7 +17,7 @@
     <style name="ButtonsStyle" parent="Theme.Calculator">
         <item name="android:insetRight">@dimen/number_button_inset</item>
         <item name="android:insetLeft">@dimen/number_button_inset</item>
-        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:textSize">@dimen/button_text_size_land</item>
     </style>
 
     <style name="numberButtonsStyle" parent="ButtonsStyle">
@@ -32,11 +32,11 @@
 
     <style name="signButtonsStyle" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:textColor">@color/yale_blue_A</item>
-        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:textSize">@dimen/button_text_size_land</item>
     </style>
 
     <style name="screenTextView" parent="Theme.Calculator">
-        <item name="android:layout_marginBottom">@dimen/screen_margin_bottom</item>
+        <item name="android:layout_marginBottom">@dimen/screen_margin_bottom_land</item>
         <item name="android:textColor">@color/yale_yellow_A</item>
         <item name="android:textColorHint">@color/yale_yellow_A</item>
         <item name="android:textSize">@dimen/screen_text_size</item>

@@ -76,8 +76,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void buttonsInit() {
-
-
         setNumberButtonsListeners();
 
         plusButton = findViewById(R.id.plus_button);
@@ -97,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
             findViewById(numberButtonsIDs[i]).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Button button = (Button)v;
+                    Button button = (Button) v;
                     calculator.putNumber(button.getText().toString());
                     updateScreen();
                 }
