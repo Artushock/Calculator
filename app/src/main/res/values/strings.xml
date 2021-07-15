@@ -19,4 +19,6 @@
     <string name="_comma_sign">,</string>
     <string name="_0">0</string>
     <string name="_equally_sign">=</string>
+    <string name="light_theme_resource">Светлая тема</string>
+    <string name="dark_theme_resource">Темная тема</string>
 </resources>

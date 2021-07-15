@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/back"
+    style="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="?attr/colorOnBackground">
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/comma_button"
-        style="@style/signButtonsStyle"
+        style="@style/Calculator.Signs.Buttons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/_comma_sign"
@@ -18,7 +21,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/zero_button"
-        style="@style/numberButtonsStyle"
+        style="@style/Calculator.Numbers.Buttons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/_0"
@@ -29,7 +32,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/equally_button"
-        style="@style/mainSignButtonsStyle"
+        style="@style/Calculator.MainSigns.Buttons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/_equally_sign"
@@ -40,7 +43,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/one_button"
-        style="@style/numberButtonsStyle"
+        style="@style/Calculator.Numbers.Buttons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/_1"
@@ -50,7 +53,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/two_button"
-        style="@style/numberButtonsStyle"
+        style="@style/Calculator.Numbers.Buttons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/_2"
@@ -60,7 +63,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/three_button"
-        style="@style/numberButtonsStyle"
+        style="@style/Calculator.Numbers.Buttons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/_3"
@@ -70,7 +73,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/plus_button"
-        style="@style/signButtonsStyle"
+        style="@style/Calculator.Signs.Buttons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/_plus_sign"
@@ -81,7 +84,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/four_button"
-        style="@style/numberButtonsStyle"
+        style="@style/Calculator.Numbers.Buttons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/_4"
@@ -91,7 +94,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/five_button"
-        style="@style/numberButtonsStyle"
+        style="@style/Calculator.Numbers.Buttons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/_5"
@@ -101,7 +104,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/six_button"
-        style="@style/numberButtonsStyle"
+        style="@style/Calculator.Numbers.Buttons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/_6"
@@ -111,7 +114,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/minus_button"
-        style="@style/signButtonsStyle"
+        style="@style/Calculator.Signs.Buttons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/_minus_sign"
@@ -121,7 +124,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/seven_button"
-        style="@style/numberButtonsStyle"
+        style="@style/Calculator.Numbers.Buttons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/_7"
@@ -131,7 +134,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/eight_button"
-        style="@style/numberButtonsStyle"
+        style="@style/Calculator.Numbers.Buttons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/_8"
@@ -141,7 +144,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/nine_button"
-        style="@style/numberButtonsStyle"
+        style="@style/Calculator.Numbers.Buttons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/_9"
@@ -151,7 +154,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/multiply_button"
-        style="@style/signButtonsStyle"
+        style="@style/Calculator.Signs.Buttons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/_multiply_sign"
@@ -161,7 +164,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/clear_all_button"
-        style="@style/mainSignButtonsStyle"
+        style="@style/Calculator.MainSigns.Buttons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/_clear_all_sign"
@@ -171,7 +174,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/backspace_button"
-        style="@style/signButtonsStyle"
+        style="@style/Calculator.Signs.Buttons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/_backspace_sign"
@@ -181,7 +184,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/percent_button"
-        style="@style/signButtonsStyle"
+        style="@style/Calculator.Signs.Buttons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/_percent_sign"
@@ -191,7 +194,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/divide_button"
-        style="@style/signButtonsStyle"
+        style="@style/Calculator.Signs.Buttons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/_divide_sign"
@@ -202,13 +205,14 @@
 
     <TextView
         android:id="@+id/text_screen"
-        style="@style/screenTextView"
+        style="@style/Calculator.Screen"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:hint="@string/_0"
         android:textAlignment="textEnd"
         app:layout_constraintBottom_toTopOf="@id/clear_all_button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="50"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
