@@ -3,14 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="?attr/colorOnBackground">
+    android:background="?attr/colorOnBackground"
+    android:padding="16dp">
 
     <Button
         android:id="@+id/percent_button"
         style="@style/Calculator.Signs.Buttons"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/_percent_sign"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/comma_button"
@@ -19,8 +17,6 @@
     <Button
         android:id="@+id/comma_button"
         style="@style/Calculator.Signs.Buttons"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/_comma_sign"
         app:layout_constraintEnd_toStartOf="@id/zero_button"
         app:layout_constraintStart_toEndOf="@id/percent_button"
@@ -29,8 +25,6 @@
     <Button
         android:id="@+id/zero_button"
         style="@style/Calculator.Numbers.Buttons"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/_0"
         app:layout_constraintEnd_toStartOf="@id/equally_button"
         app:layout_constraintStart_toEndOf="@id/comma_button"
@@ -39,8 +33,6 @@
     <Button
         android:id="@+id/equally_button"
         style="@style/Calculator.MainSigns.Buttons"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/_equally_sign"
         app:layout_constraintEnd_toStartOf="@id/plus_button"
         app:layout_constraintStart_toEndOf="@id/zero_button"
@@ -49,8 +41,6 @@
     <Button
         android:id="@+id/plus_button"
         style="@style/Calculator.Signs.Buttons"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/_plus_sign"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/equally_button"
@@ -59,8 +49,6 @@
     <Button
         android:id="@+id/backspace_button"
         style="@style/Calculator.Signs.Buttons"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/_backspace_sign"
         app:layout_constraintBottom_toTopOf="@id/percent_button"
         app:layout_constraintEnd_toStartOf="@id/one_button"
@@ -69,8 +57,6 @@
     <Button
         android:id="@+id/one_button"
         style="@style/Calculator.Numbers.Buttons"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/_1"
         app:layout_constraintEnd_toStartOf="@id/two_button"
         app:layout_constraintStart_toEndOf="@id/backspace_button"
@@ -79,8 +65,6 @@
     <Button
         android:id="@+id/two_button"
         style="@style/Calculator.Numbers.Buttons"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/_2"
         app:layout_constraintEnd_toStartOf="@id/three_button"
         app:layout_constraintStart_toEndOf="@id/one_button"
@@ -99,8 +83,6 @@
     <Button
         android:id="@+id/minus_button"
         style="@style/Calculator.Signs.Buttons"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/_minus_sign"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/three_button"
@@ -121,8 +103,6 @@
     <Button
         android:id="@+id/four_button"
         style="@style/Calculator.Numbers.Buttons"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/_4"
         app:layout_constraintBottom_toTopOf="@+id/backspace_button"
         app:layout_constraintEnd_toStartOf="@+id/five_button"
@@ -131,8 +111,6 @@
     <Button
         android:id="@+id/five_button"
         style="@style/Calculator.Numbers.Buttons"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/_5"
         app:layout_constraintEnd_toStartOf="@id/six_button"
         app:layout_constraintStart_toEndOf="@id/four_button"
@@ -141,8 +119,6 @@
     <Button
         android:id="@+id/six_button"
         style="@style/Calculator.Numbers.Buttons"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/_6"
         app:layout_constraintEnd_toStartOf="@+id/divide_button"
         app:layout_constraintStart_toEndOf="@+id/five_button"
@@ -151,8 +127,6 @@
     <Button
         android:id="@+id/divide_button"
         style="@style/Calculator.Signs.Buttons"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/_divide_sign"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/six_button"
@@ -161,8 +135,6 @@
     <Button
         android:id="@+id/seven_button"
         style="@style/Calculator.Numbers.Buttons"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/_7"
         app:layout_constraintBottom_toTopOf="@id/four_button"
         app:layout_constraintEnd_toStartOf="@id/eight_button"
@@ -171,8 +143,6 @@
     <Button
         android:id="@+id/eight_button"
         style="@style/Calculator.Numbers.Buttons"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/_8"
         app:layout_constraintEnd_toStartOf="@id/nine_button"
         app:layout_constraintStart_toEndOf="@id/seven_button"
@@ -181,8 +151,6 @@
     <Button
         android:id="@+id/nine_button"
         style="@style/Calculator.Numbers.Buttons"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/_9"
         app:layout_constraintEnd_toStartOf="@id/multiply_button"
         app:layout_constraintStart_toEndOf="@id/eight_button"
@@ -191,8 +159,6 @@
     <Button
         android:id="@+id/multiply_button"
         style="@style/Calculator.Signs.Buttons"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/_multiply_sign"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/nine_button"
@@ -200,13 +166,13 @@
 
     <TextView
         android:id="@+id/text_screen"
+        style="@style/Calculator.Screen"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textAlignment="textEnd"
         app:layout_constraintBottom_toTopOf="@+id/clear_all_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        style="@style/Calculator.Screen"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
