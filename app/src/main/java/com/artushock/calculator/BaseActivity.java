@@ -5,13 +5,11 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import static com.artushock.calculator.Constants.Calculator_Theme_Night;
+import static com.artushock.calculator.Constants.THEME_SHARED_KEY;
+import static com.artushock.calculator.Constants.THEME_SHARED_PREFERENCES;
+
 public abstract class BaseActivity extends AppCompatActivity {
-
-    private static final String THEME_SHARED_PREFERENCES = "THEME_SHARED_PREFERENCES";
-    private static final String THEME_SHARED_KEY = "THEME_SHARED_KEY";
-
-    protected static final int Calculator_Theme_Light = 0;
-    protected static final int Calculator_Theme_Night = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +22,10 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     private int codeStyleToStyleId(int codeStyle) {
-        switch (codeStyle) {
-            case Calculator_Theme_Night:
-                return R.style.Calculator_Theme_Dark;
-            default:
-                return R.style.Calculator_Theme_Light;
+        if (codeStyle == Calculator_Theme_Night) {
+            return R.style.Calculator_Theme_Dark;
         }
+        return R.style.Calculator_Theme_Light;
     }
 
     protected int getCodeStyle(int defaultThemeId) {

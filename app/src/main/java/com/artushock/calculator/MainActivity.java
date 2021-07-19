@@ -1,6 +1,7 @@
 package com.artushock.calculator;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -13,10 +14,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends BaseActivity {
-    private static final String CALCULATOR_KEY = "CALCULATOR_KEY";
-    private static final String CALCULATOR_SCREEN_KEY = "CALCULATOR_SCREEN_KEY";
+import static com.artushock.calculator.Constants.CALCULATOR_KEY;
+import static com.artushock.calculator.Constants.CALCULATOR_SCREEN_KEY;
+import static com.artushock.calculator.Constants.CURRENT_THEME;
+import static com.artushock.calculator.Constants.Calculator_Theme_Light;
+import static com.artushock.calculator.Constants.REQUEST_SETTINGS_CODE;
 
+public class MainActivity extends BaseActivity{
     private final int[] numberButtonsIDs = {
             R.id.zero_button,
             R.id.one_button,
@@ -82,16 +86,30 @@ public class MainActivity extends BaseActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         switch (id) {
-            case R.id.light_theme:
-                setAppTheme(Calculator_Theme_Light);
-                recreate();
+            case R.id.menu_settings:
+                Intent settingsIntent = new Intent(this, SettingsActivity.class);
+                settingsIntent.putExtra(CURRENT_THEME, getCodeStyle(Calculator_Theme_Light));
+                startActivityForResult(settingsIntent, REQUEST_SETTINGS_CODE);
                 return true;
-            case R.id.dark_theme:
-                setAppTheme(Calculator_Theme_Night);
-                recreate();
+            case R.id.menu_exit:
+                finishAndRemoveTask();
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode != REQUEST_SETTINGS_CODE){
+            super.onActivityResult(requestCode, resultCode, data);
+            return;
+        }
+
+        if(resultCode == RESULT_OK){
+            setAppTheme(data.getIntExtra(CURRENT_THEME, Calculator_Theme_Light));
+            recreate();
+        }
+
     }
 
     private void screenInit() {

@@ -7,6 +7,7 @@
         <item name="colorPrimaryVariant">@color/yale_blue_B</item>
         <item name="colorOnBackground">@color/white</item>
         <item name="colorOnPrimary">@color/white</item>
+        <item name="colorBackgroundFloating"></item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/yale_yellow_B</item>
         <item name="colorSecondaryVariant">@color/yale_yellow_A</item>
@@ -68,4 +69,35 @@
         <item name="android:layout_marginLeft">@dimen/number_button_inset</item>
         <item name="android:hint">@string/_0</item>
     </style>
+
+    <style name="Calculator.Settings.TextView" parent="Calculator.Theme.Light">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="Calculator.Settings.PrimaryText" parent="Calculator.Settings.TextView">
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/settings_primary_text_text_size</item>
+    </style>
+
+    <style name="Calculator.Settings.SecondaryText" parent="Calculator.Settings.TextView">
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:textSize">@dimen/settings_secondary_text_text_size</item>
+    </style>
+
+
+
+    <style name="Calculator.Settings.RadioButtons" parent="Calculator.Theme.Light">
+        <item name="android:textSize">@dimen/settings_radio_buttons_text_size</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:checked">false</item>
+    </style>
+
+
 </resources>
