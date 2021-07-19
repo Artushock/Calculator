@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorOnBackground"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/settings_text_view"
+        style="@style/Calculator.Settings.PrimaryText"
+        android:text="@string/settings_txt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/themes_text_view"
+        style="@style/Calculator.Settings.SecondaryText"
+        android:text="@string/app_theme_txt"
+        app:layout_constraintTop_toBottomOf="@id/settings_text_view"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <RadioGroup
+        android:id="@+id/theme_settings_radio_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/themes_text_view"
+        app:layout_constraintTop_toBottomOf="@id/themes_text_view">
+
+
+        <RadioButton
+            android:id="@+id/light_theme_radio_button"
+            style="@style/Calculator.Settings.RadioButtons"
+            android:text="@string/light_txt" />
+
+        <RadioButton
+            android:id="@+id/dark_theme_radio_button"
+            style="@style/Calculator.Settings.RadioButtons"
+            android:text="@string/dark_txt" />
+
+    </RadioGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save_settings_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/save_txt"
+        app:layout_constraintStart_toStartOf="@id/themes_text_view"
+        app:layout_constraintTop_toBottomOf="@id/theme_settings_radio_group" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

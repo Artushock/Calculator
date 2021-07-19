@@ -7,4 +7,9 @@
     <dimen name="screen_margin_bottom_land">8dp</dimen>
 
     <dimen name="number_button_inset">6dp</dimen>
+
+    <dimen name="settings_radio_buttons_text_size">16sp</dimen>
+    <dimen name="settings_primary_text_text_size">24sp</dimen>
+    <dimen name="settings_secondary_text_text_size">20sp</dimen>
+
 </resources>

@@ -21,4 +21,11 @@
     <string name="_equally_sign">=</string>
     <string name="light_theme_resource">Светлая тема</string>
     <string name="dark_theme_resource">Темная тема</string>
+    <string name="settings">Настройки</string>
+    <string name="exit">Выход</string>
+    <string name="settings_txt">Настройки</string>
+    <string name="app_theme_txt">Тема приложения</string>
+    <string name="light_txt">Светлая</string>
+    <string name="dark_txt">Темная</string>
+    <string name="save_txt">Сохранить</string>
 </resources>
